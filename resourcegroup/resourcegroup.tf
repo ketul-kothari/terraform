@@ -8,7 +8,7 @@ provider "azurerm" {
 # demorg is terraform variable name
 # tfresourcegroup is resource group name in azure
 resource "azurerm_resource_group" "demorg" {
-    name = tfresourcegroup"
+    name = "tfresourcegroup"
     location = var.location
     tags = {
         env = "demo"
