@@ -14,3 +14,9 @@ resource "azurerm_resource_group" "demorg" {
         env = "demo"
     }
 }
+# azurerm_resource_group.demorg
+# azurerm_resource_group.demorg.id
+
+output "resourcegroupid" {
+    value = azurerm_resource_group.demorg.id
+}

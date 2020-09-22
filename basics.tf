@@ -49,6 +49,39 @@ variable "myobject" {
         identity : "Batman"
     }
 }
+
+variable "mybool" {
+    default = true
+}
+
+
+variable "mytuple" {
+    type = tuple([string, number, bool])
+    default = ["value 1", 2, true]
+}
+
+
+# input variable
+# Value of this vaiables are requested on console on terraform apply
+variable "inputmystring" {
+    type = string
+    description = "Enter resource name"
+}
+
+
+# output 
+/*
+output "resourcegroupid" {
+    value = azurerm_resource_group.demorg.id
+}
+*/
+
 #var.myobject
 # var.myobject.name
 
+# resource create format
+/*
+resource "resource-type (provider)" "terraform_name" {
+    ... cloud provider properties
+}
+*/
