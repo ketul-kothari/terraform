@@ -63,13 +63,19 @@ variable "mytuple" {
 
 # input variable
 # Value of this vaiables are requested on console on terraform apply
+# to avoid prompt the input variables can be passed as command params 
+# terraform apply -var 'inputmystring=test' -var 'inputmystring_test=test2'
 variable "inputmystring" {
     type = string
     description = "Enter resource name"
 }
 
 
+
+
 # output 
+# the values are printed on console post apply
+# to view explicitly use terraform output resourcegroupid
 /*
 output "resourcegroupid" {
     value = azurerm_resource_group.demorg.id
@@ -83,5 +89,22 @@ output "resourcegroupid" {
 /*
 resource "resource-type (provider)" "terraform_name" {
     ... cloud provider properties
+}
+*/
+
+#terraform show - to get details from state file
+
+# terraform state - to perform ops on state
+
+# Block syntax
+/*
+BlockType <Block lable>...<Block label> {
+	Arguments
+	name = value (string, number, object, map, tuple)
+	.
+	.
+	Blocks
+	.
+	.
 }
 */

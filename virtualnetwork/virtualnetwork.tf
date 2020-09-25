@@ -3,11 +3,6 @@ provider "azurerm" {
     features {}
 }
 
-
-# This is an existing resource group
-# will be importing it
-# terraform import azurerm_resource_group.demorg /subscriptions/f7120d1f-fb47-4243-8885-97b94ccdfee5/resourceGroups/tfresourcegroup
-
 resource "azurerm_resource_group" "demorg" {
     name = "tfresourcegroup"
     location = var.location
